@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ndiaga Euro Electronics - Version Standalone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="https://unpkg.com/vue-router@4/dist/vue-router.global.js"></script>
+  <script src="https://unpkg.com/pinia@2/dist/pinia.iife.js"></script>
+  <style>
+    /* Copier le contenu de src/assets/styles/main.css ici */
+    :root {
+      --primary: #00d9ff;
+      --primary-dark: #00a8cc;
+      --secondary: #ff006e;
+      --accent: #ffbe0b;
+      --dark: #0a0e27;
+      --dark-alt: #1a1f3a;
+      --dark-lighter: #252b4a;
+      --text-light: #ffffff;
+      --text-muted: #a8b2d1;
+      --border: #2d3555;
+      --success: #00ff88;
+      --gradient-primary: linear-gradient(135deg, #00d9ff 0%, #0066ff 100%);
+      --gradient-secondary: linear-gradient(135deg, #ff006e 0%, #ff6b9d 100%);
+      --gradient-dark: linear-gradient(180deg, #0a0e27 0%, #1a1f3a 100%);
+      --shadow-sm: 0 2px 8px rgba(0, 217, 255, 0.1);
+      --shadow-md: 0 4px 20px rgba(0, 217, 255, 0.2);
+      --shadow-lg: 0 8px 32px rgba(0, 217, 255, 0.3);
+      --shadow-glow: 0 0 40px rgba(0, 217, 255, 0.4);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--dark);
+      color: var(--text-light);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    #app {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Orbitron', monospace;
+      font-weight: 700;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Ajoutez plus de styles ici */
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  
+  <script>
+    // Version standalone avec Vue CDN
+    // Note: Pour la version complète, utilisez npm install et npm run dev
+    
+    const { createApp } = Vue;
+    const { createRouter, createWebHashHistory } = VueRouter;
+    const { createPinia } = Pinia;
+    
+    const app = createApp({
+      template: `
+        <div>
+          <h1 style="text-align: center; padding: 3rem; font-size: 3rem; background: linear-gradient(135deg, #00d9ff 0%, #0066ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+            ⚡ Ndiaga Euro Electronics
+          </h1>
+          <div class="container" style="padding: 2rem;">
+            <p style="text-align: center; font-size: 1.5rem; color: #a8b2d1; margin-bottom: 3rem;">
+              Version Standalone - Pour la version complète, installez avec npm
+            </p>
+            <div style="text-align: center; padding: 3rem; background: #1a1f3a; border-radius: 16px; border: 2px solid #00d9ff;">
+              <h2 style="color: #00d9ff; margin-bottom: 2rem;">Installation Requise</h2>
+              <p style="color: #a8b2d1; font-size: 1.2rem; margin-bottom: 2rem;">
+                Pour utiliser toutes les fonctionnalités de l'application :
+              </p>
+              <ol style="text-align: left; max-width: 600px; margin: 0 auto 2rem; color: #a8b2d1; font-size: 1.1rem; line-height: 2;">
+                <li>Ouvrez un terminal dans le dossier du projet</li>
+                <li>Exécutez : <code style="background: #0a0e27; padding: 0.5rem 1rem; border-radius: 6px; color: #00d9ff;">npm install</code></li>
+                <li>Puis lancez : <code style="background: #0a0e27; padding: 0.5rem 1rem; border-radius: 6px; color: #00d9ff;">npm run dev</code></li>
+              </ol>
+              <p style="color: #00ff88; font-size: 1.1rem;">
+                ✓ Consultez INSTALLATION.md pour plus de détails
+              </p>
+            </div>
+          </div>
+        </div>
+      `
+    });
+    
+    app.mount('#app');
+  </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+╔═══════════════════════════════════════════════════════════════════╗
+║                                                                   ║
+║        🚀 NDIAGA EURO ELECTRONICS - PROJET VUE.JS COMPLET        ║
+║                                                                   ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+📋 POUR DÉMARRER LE PROJET :
+
+1️⃣  Ouvrir un terminal dans ce dossier
+    - Windows : Shift + Clic droit → "Ouvrir PowerShell ici"
+    - Mac : Clic droit → Services → "Nouveau terminal"
+    - Linux : Clic droit → "Ouvrir dans le terminal"
+
+2️⃣  Installer les dépendances (une seule fois)
+    Tapez : npm install
+    Appuyez sur Entrée
+    ⏱️ Attendez 1-2 minutes...
+
+3️⃣  Lancer le serveur de développement
+    Tapez : npm run dev
+    Appuyez sur Entrée
+
+4️⃣  Ouvrir dans le navigateur
+    Le terminal affichera : Local: http://localhost:5173
+    Ctrl+Clic sur ce lien (ou copiez-le dans votre navigateur)
+
+🎉 C'EST TOUT ! Le site est maintenant accessible !
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📚 DOCUMENTATION DISPONIBLE :
+
+• LISEZ-MOI.md        → Guide complet en français 🇫🇷
+• README.md           → Documentation complète en anglais
+• INSTALLATION.md     → Guide d'installation détaillé
+• QUICKSTART.md       → Démarrage rapide
+• DESIGN.md          → Aperçu du design
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ CE QUI EST INCLUS :
+
+✓ 7 pages complètes (Accueil, Boutique, Panier, etc.)
+✓ 28 produits dans 7 catégories
+✓ Panier fonctionnel avec Pinia
+✓ Commande via WhatsApp
+✓ Filtres et recherche
+✓ Design responsive
+✓ Animations fluides
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔧 COMMANDES UTILES :
+
+npm run dev      → Lancer en développement
+npm run build    → Compiler pour production
+npm run preview  → Prévisualiser le build
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🆘 BESOIN D'AIDE ?
+
+Si "npm" n'est pas reconnu :
+➜ Installez Node.js depuis https://nodejs.org
+
+Si vous voyez des erreurs :
+➜ Lisez LISEZ-MOI.md section "Problèmes courants"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 ASTUCE : Pour arrêter le serveur, appuyez sur Ctrl+C dans le terminal
+
+Bon développement ! 🎉
+
