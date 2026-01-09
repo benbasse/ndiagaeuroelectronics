@@ -1,9 +1,24 @@
 <template>
   <div class="product-card" @click="goToProduct">
+
     <div class="product-image">
-      <div class="image-placeholder">
-        <span class="placeholder-icon">{{ getCategoryIcon(product.category) }}</span>
-      </div>
+      <template v-if="product.mainImage || (product.images && product.images.length > 0)">
+        <img
+          :src="'/' + (product.mainImage || product.images[0])"
+          :alt="product.name"
+          class="product-img"
+          @error="imgError = true"
+          v-show="!imgError"
+        />
+        <div class="image-placeholder" v-show="imgError">
+          <span class="placeholder-icon">{{ getCategoryIcon(product.category) }}</span>
+        </div>
+      </template>
+      <template v-else>
+        <div class="image-placeholder">
+          <span class="placeholder-icon">{{ getCategoryIcon(product.category) }}</span>
+        </div>
+      </template>
       <div class="product-badge" v-if="product.stock < 10">
         Stock Limité
       </div>
@@ -46,6 +61,9 @@ const props = defineProps({
   }
 })
 
+import { ref } from 'vue'
+const imgError = ref(false)
+
 const router = useRouter()
 const cartStore = useCartStore()
 
@@ -80,6 +98,13 @@ const addToCart = () => {
 </script>
 
 <style scoped>
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
 .product-card {
   background: var(--dark-alt);
   border-radius: 16px;

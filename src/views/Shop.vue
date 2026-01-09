@@ -65,14 +65,14 @@
 import { ref, computed, watch, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import ProductCard from '../components/ProductCard.vue'
+
 import { categories, products } from '../data/products'
-
 const route = useRoute()
-
 const selectedCategory = ref('')
 const sortBy = ref('default')
 const searchQuery = ref('')
-const displayProducts = ref([...products])
+// Toujours synchronisé avec products, et prix par défaut si manquant
+const displayProducts = computed(() => products.map(p => ({ ...p, price: p.price ?? 0 })))
 
 const pageTitle = computed(() => {
   if (selectedCategory.value) {

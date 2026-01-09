@@ -8,20 +8,25 @@
           <h2>Explorez Nos Catégories</h2>
           <p>Découvrez notre large gamme de produits électroniques premium</p>
         </div>
-        <div class="grid grid-4">
-          <CategoryCard v-for="category in categories" :key="category.id" :category="category" />
-        </div>
+        <ul class="categories-list">
+          <li v-for="category in categories" :key="category.id" class="category-text">
+            {{ category.name || category.nom || category.titre || category.label || category.id }}
+          </li>
+        </ul>
       </div>
     </section>
 
     <section class="section featured-section">
       <div class="container">
         <div class="section-title">
-          <h2>Produits Populaires</h2>
-          <p>Les produits les plus demandés par nos clients</p>
+          <h2>Nos Produits</h2>
+          <p>Découvrez tous nos produits classés par catégorie</p>
         </div>
-        <div class="grid grid-3">
-          <ProductCard v-for="product in featuredProducts" :key="product.id" :product="product" />
+        <div v-for="(products, category) in groupedAllProducts" :key="category" class="category-group">
+          <h3 class="category-title">{{ category }}</h3>
+          <div class="grid grid-3">
+            <ProductCard v-for="product in products" :key="product.id" :product="product" />
+          </div>
         </div>
         <div class="section-cta">
           <router-link to="/shop" class="btn btn-primary">
@@ -68,8 +73,15 @@ import CategoryCard from '../components/CategoryCard.vue'
 import ProductCard from '../components/ProductCard.vue'
 import { categories, products } from '../data/products'
 
-const featuredProducts = computed(() => {
-  return products.slice(0, 6)
+// Grouper les produits du catalogue principal par catégorie
+const groupedAllProducts = computed(() => {
+  const groups = {}
+  products.forEach(prod => {
+    const cat = prod.category || prod.categorie || 'Autre'
+    if (!groups[cat]) groups[cat] = []
+    groups[cat].push(prod)
+  })
+  return groups
 })
 </script>
 
@@ -138,6 +150,41 @@ const featuredProducts = computed(() => {
 .feature-card p {
   color: var(--text-muted);
   line-height: 1.6;
+}
+
+.categories-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 2rem 0 1rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.category-text {
+  font-size: 1.1rem;
+  color: var(--primary);
+  background: var(--dark-alt);
+  padding: 0.7rem 1.5rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  transition: background 0.2s;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.category-text:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+.category-title {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: var(--primary);
+  text-transform: capitalize;
 }
 
 @media (max-width: 768px) {
