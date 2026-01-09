@@ -4,15 +4,21 @@
       <div class="footer-content">
         <div class="footer-section">
           <div class="footer-logo">
-            <span class="logo-icon">⚡</span>
+            <img
+              src="/NDE.png"
+              alt="Logo NDIAGA EURO"
+              class="logo-icon logo-img"
+            />
+
             <span class="logo-text">
               <span class="logo-name">NDIAGA EURO</span>
               <span class="logo-tagline">ELECTRONICS</span>
             </span>
           </div>
           <p class="footer-description">
-            Votre destination premium pour l'électronique de haute qualité. 
-            Découvrez les dernières technologies et équipez-vous avec le meilleur.
+            Votre destination premium pour l'électronique de haute qualité.
+            Découvrez les dernières technologies et équipez-vous avec le
+            meilleur.
           </p>
           <div class="social-links">
             <a href="#" class="social-link" aria-label="Facebook">📘</a>
@@ -35,9 +41,13 @@
         <div class="footer-section">
           <h4>Catégories</h4>
           <ul>
-            <li><router-link to="/shop/smartphones">Smartphones</router-link></li>
+            <li>
+              <router-link to="/shop/smartphones">Smartphones</router-link>
+            </li>
             <li><router-link to="/shop/laptops">Laptops</router-link></li>
-            <li><router-link to="/shop/televisions">Télévisions</router-link></li>
+            <li>
+              <router-link to="/shop/televisions">Télévisions</router-link>
+            </li>
             <li><router-link to="/shop/audio-devices">Audio</router-link></li>
           </ul>
         </div>
@@ -66,7 +76,10 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; {{ currentYear }} Ndiaga Euro Electronics. Tous droits réservés.</p>
+        <p>
+          &copy; {{ currentYear }} Ndiaga Euro Electronics. Tous droits
+          réservés.
+        </p>
         <div class="footer-badges">
           <span class="badge-item">✓ Paiement Sécurisé</span>
           <span class="badge-item">✓ Livraison Rapide</span>
@@ -78,12 +91,24 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed } from "vue";
 
-const currentYear = computed(() => new Date().getFullYear())
+const currentYear = computed(() => new Date().getFullYear());
 </script>
 
 <style scoped>
+
+/* Logo image adaptée à la taille du flash */
+.logo-img {
+  height: 2rem;
+  width: auto;
+  max-width: 5rem;
+  display: inline-block;
+  vertical-align: middle;
+  object-fit: contain;
+  margin-right: 0.1rem;
+  animation: none;
+}
 .footer {
   background: var(--dark-alt);
   border-top: 1px solid var(--border);
@@ -98,7 +123,7 @@ const currentYear = computed(() => new Date().getFullYear())
 }
 
 .footer-section h4 {
-  font-family: 'Orbitron', monospace;
+  font-family: "Orbitron", monospace;
   font-size: 1.1rem;
   color: var(--primary);
   margin-bottom: 1.5rem;
@@ -124,7 +149,7 @@ const currentYear = computed(() => new Date().getFullYear())
 }
 
 .logo-name {
-  font-family: 'Orbitron', monospace;
+  font-family: "Orbitron", monospace;
   font-size: 1.25rem;
   font-weight: 800;
   background: var(--gradient-primary);
@@ -135,7 +160,7 @@ const currentYear = computed(() => new Date().getFullYear())
 }
 
 .logo-tagline {
-  font-family: 'Orbitron', monospace;
+  font-family: "Orbitron", monospace;
   font-size: 0.65rem;
   font-weight: 500;
   color: var(--text-muted);

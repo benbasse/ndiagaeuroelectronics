@@ -2,14 +2,19 @@
   <nav class="navbar" :class="{ 'navbar-scrolled': isScrolled }">
     <div class="container navbar-container">
       <router-link to="/" class="logo">
-        <span class="logo-icon">⚡</span>
+        <img src="/NDE.png" alt="Logo NDIAGA EURO" class="logo-icon logo-img" />
+
         <span class="logo-text">
           <span class="logo-name">NDIAGA EURO</span>
           <span class="logo-tagline">ELECTRONICS</span>
         </span>
       </router-link>
 
-      <button class="mobile-toggle" @click="toggleMobile" aria-label="Toggle menu">
+      <button
+        class="mobile-toggle"
+        @click="toggleMobile"
+        aria-label="Toggle menu"
+      >
         <span></span>
         <span></span>
         <span></span>
@@ -31,34 +36,34 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue'
-import { useCartStore } from '../stores/cart'
+import { ref, computed, onMounted, onUnmounted } from "vue";
+import { useCartStore } from "../stores/cart";
 
-const cartStore = useCartStore()
-const cartCount = computed(() => cartStore.cartCount)
+const cartStore = useCartStore();
+const cartCount = computed(() => cartStore.cartCount);
 
-const isScrolled = ref(false)
-const mobileOpen = ref(false)
+const isScrolled = ref(false);
+const mobileOpen = ref(false);
 
 const handleScroll = () => {
-  isScrolled.value = window.scrollY > 50
-}
+  isScrolled.value = window.scrollY > 50;
+};
 
 const toggleMobile = () => {
-  mobileOpen.value = !mobileOpen.value
-}
+  mobileOpen.value = !mobileOpen.value;
+};
 
 const closeMobile = () => {
-  mobileOpen.value = false
-}
+  mobileOpen.value = false;
+};
 
 onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-})
+  window.addEventListener("scroll", handleScroll);
+});
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
 
 <style scoped>
@@ -70,6 +75,18 @@ onUnmounted(() => {
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
   transition: all 0.3s ease;
+}
+
+/* Logo image adaptée à la taille du flash */
+.logo-img {
+  height: 2rem;
+  width: auto;
+  max-width: 5rem;
+  display: inline-block;
+  vertical-align: middle;
+  object-fit: contain;
+  margin-right: 0.1rem;
+  animation: none;
 }
 
 .navbar-scrolled {
@@ -100,7 +117,8 @@ onUnmounted(() => {
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
@@ -115,7 +133,7 @@ onUnmounted(() => {
 }
 
 .logo-name {
-  font-family: 'Orbitron', monospace;
+  font-family: "Orbitron", monospace;
   font-size: 1.25rem;
   font-weight: 800;
   background: var(--gradient-primary);
@@ -126,7 +144,7 @@ onUnmounted(() => {
 }
 
 .logo-tagline {
-  font-family: 'Orbitron', monospace;
+  font-family: "Orbitron", monospace;
   font-size: 0.65rem;
   font-weight: 500;
   color: var(--text-muted);
@@ -171,7 +189,7 @@ onUnmounted(() => {
 }
 
 .nav-links a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -5px;
   left: 0;
@@ -228,7 +246,7 @@ onUnmounted(() => {
   justify-content: center;
   font-size: 0.75rem;
   font-weight: 700;
-  font-family: 'Orbitron', monospace;
+  font-family: "Orbitron", monospace;
   box-shadow: 0 2px 8px rgba(255, 0, 110, 0.4);
   animation: cartBadgePulse 0.5s ease;
 }

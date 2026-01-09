@@ -35,11 +35,12 @@
       </div>
 
       <div class="product-footer">
+        <!--
         <div class="product-price">
           <span class="price">{{ formatPrice(product.price) }}</span>
           <span class="currency">FCFA</span>
         </div>
-        
+        -->
         <button class="add-to-cart-btn" @click.stop="addToCart">
           <span class="btn-icon">🛒</span>
           <span class="btn-text">Ajouter</span>

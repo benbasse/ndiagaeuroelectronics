@@ -50,12 +50,13 @@
           </div>
           <div class="floating-card card-2">
             <span class="card-icon">💻</span>
-            <span class="card-text">Laptops</span>
+            <span class="card-text">Ordinateurs</span>
           </div>
           <div class="floating-card card-3">
-            <span class="card-icon">🎧</span>
-            <span class="card-text">Audio</span>
+            <span class="card-icon">🧊</span>
+            <span class="card-text">Réfrigérateurs</span>
           </div>
+          
         </div>
       </div>
     </div>

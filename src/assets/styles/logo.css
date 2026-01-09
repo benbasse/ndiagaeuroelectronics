@@ -1,0 +1,16 @@
+/* Logo responsive pour NDIAGA EURO ELECTRONICS */
+.logo-img {
+  height: 20px;
+  width: auto;
+  max-width: 70px;
+  margin-right: 6px;
+  vertical-align: middle;
+  object-fit: contain;
+}
+@media (max-width: 600px) {
+  .logo-img {
+    height: 14px;
+    max-width: 40px;
+    margin-right: 2px;
+  }
+}

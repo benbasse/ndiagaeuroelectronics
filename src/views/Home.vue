@@ -2,7 +2,7 @@
   <div class="home">
     <Hero />
 
-    <section class="section categories-section">
+    <section class="section categories-section categories-mobile-hide">
       <div class="container">
         <div class="section-title">
           <h2>Explorez Nos Catégories</h2>
@@ -15,6 +15,7 @@
         </ul>
       </div>
     </section>
+
 
     <section class="section featured-section">
       <div class="container">
@@ -88,6 +89,12 @@ const groupedAllProducts = computed(() => {
 <style scoped>
 .home {
   width: 100%;
+}
+/* Responsive : masquer les catégories sur mobile */
+@media (max-width: 768px) {
+  .categories-mobile-hide {
+    display: none !important;
+  }
 }
 
 .categories-section {

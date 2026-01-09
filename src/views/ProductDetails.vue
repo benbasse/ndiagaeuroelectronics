@@ -8,9 +8,24 @@
       <div class="product-content">
         <div class="product-image-section">
           <div class="product-image-main">
-            <div class="image-placeholder">
-              <span class="placeholder-icon">{{ getCategoryIcon(product.category) }}</span>
-            </div>
+            <template v-if="product.mainImage || (product.images && product.images.length > 0)">
+              <img
+                :src="'/' + (product.mainImage || product.images[0])"
+                :alt="product.name"
+                class="product-img"
+                @error="imgError = true"
+                v-show="!imgError"
+              />
+              <div class="image-placeholder" v-show="imgError">
+                <span class="placeholder-icon">{{ getCategoryIcon(product.category) }}</span>
+              </div>
+            </template>
+            <template v-else>
+              <div class="image-placeholder">
+                <span class="placeholder-icon">{{ getCategoryIcon(product.category) }}</span>
+              </div>
+            </template>
+
           </div>
           <div class="product-badges">
             <span class="badge" v-if="product.stock < 10">Stock Limité</span>
@@ -27,10 +42,12 @@
           </div>
 
           <div class="product-price-section">
+            <!--
             <div class="price-main">
               <span class="price">{{ formatPrice(product.price) }}</span>
               <span class="currency">FCFA</span>
             </div>
+            -->
             <div class="stock-info">
               <span class="stock-icon">📦</span>
               <span>{{ product.stock }} en stock</span>
@@ -109,6 +126,8 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
+// ...existing code...
+const imgError = ref(false)
 import { useRoute, useRouter } from 'vue-router'
 import { useCartStore } from '../stores/cart'
 import ProductCard from '../components/ProductCard.vue'
@@ -226,6 +245,9 @@ onMounted(() => {
   border-radius: 16px;
   overflow: hidden;
   aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .image-placeholder {
@@ -275,6 +297,7 @@ onMounted(() => {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
   color: var(--text-light);
+  font-family: 'Montserrat', 'Arial', sans-serif;
 }
 
 .product-category {
@@ -524,6 +547,28 @@ onMounted(() => {
 @media (max-width: 768px) {
   .product-details {
     padding: 2rem 0 3rem;
+  }
+
+  .product-content {
+    gap: 2rem;
+  }
+
+  .product-image-main {
+    max-width: 90vw;
+    min-width: 0;
+    aspect-ratio: unset;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .product-image-main img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    max-height: 300px;
+    background: var(--dark-alt);
   }
 
   .product-name {
