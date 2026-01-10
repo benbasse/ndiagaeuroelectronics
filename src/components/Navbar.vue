@@ -2,7 +2,7 @@
   <nav class="navbar" :class="{ 'navbar-scrolled': isScrolled }">
     <div class="container navbar-container">
       <router-link to="/" class="logo">
-        <img src="/NDE.png" alt="Logo NDIAGA EURO" class="logo-icon logo-img" />
+        <img src="/logo-removebg-preview.png" alt="Logo NDIAGA EURO" class="logo-icon logo-img" />
 
         <span class="logo-text">
           <span class="logo-name">NDIAGA EURO</span>

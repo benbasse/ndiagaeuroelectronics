@@ -3,7 +3,9 @@
     <section class="about-hero">
       <div class="container">
         <h1>À Propos de Ndiaga Euro Electronics</h1>
-        <p class="hero-subtitle">Votre partenaire de confiance pour l'électronique premium depuis 2020</p>
+        <p class="hero-subtitle">
+          Votre partenaire de confiance pour l'électronique premium depuis 2020
+        </p>
       </div>
     </section>
 
@@ -13,25 +15,36 @@
           <div class="story-text">
             <h2>Notre Histoire</h2>
             <p>
-              Fondée en 2020 à Dakar, Ndiaga Euro Electronics est née d'une passion pour la technologie 
-              et d'une vision claire : rendre l'électronique premium accessible à tous les Sénégalais.
+              Fondée en 2020 à Dakar, Ndiaga Euro Electronics est née d'une
+              passion pour la technologie et d'une vision claire : rendre
+              l'électronique premium accessible à tous les Sénégalais.
             </p>
             <p>
-              Nous avons commencé comme une petite boutique spécialisée dans les smartphones, et nous 
-              sommes aujourd'hui devenus un acteur majeur de la distribution d'électronique au Sénégal, 
-              offrant une gamme complète de produits de haute qualité.
+              Nous avons commencé comme une petite boutique spécialisée dans les
+              smartphones, et nous sommes aujourd'hui devenus un acteur majeur
+              de la distribution d'électronique au Sénégal, offrant une gamme
+              complète de produits de haute qualité.
             </p>
             <p>
-              Notre succès repose sur trois piliers fondamentaux : l'authenticité des produits, 
-              l'excellence du service client, et des prix compétitifs. Chaque produit que nous 
-              vendons est soigneusement sélectionné et vérifié pour garantir la meilleure expérience 
-              à nos clients.
+              Notre succès repose sur trois piliers fondamentaux :
+              l'authenticité des produits, l'excellence du service client, et
+              des prix compétitifs. Chaque produit que nous vendons est
+              soigneusement sélectionné et vérifié pour garantir la meilleure
+              expérience à nos clients.
             </p>
           </div>
           <div class="story-visual">
             <div class="visual-box box-1">
               <span class="box-icon">🏆</span>
               <h3>Excellence</h3>
+              <!-- mettre une image ici -->
+              <!-- <div class="box-icon">
+                <img
+              src="/excellence.jpeg"
+              alt="Excellence"
+              class="excellence-img"
+            />
+              </div> -->
             </div>
             <div class="visual-box box-2">
               <span class="box-icon">✓</span>
@@ -46,7 +59,7 @@
       </div>
     </section>
 
-    <section class="section mission-section">
+     <section class="section mission-section">
       <div class="container">
         <h2 class="section-title-main">Notre Mission</h2>
         <div class="mission-grid">
@@ -54,24 +67,21 @@
             <div class="mission-icon">🎯</div>
             <h3>Notre Vision</h3>
             <p>
-              Devenir la référence incontournable de l'électronique premium au Sénégal et en 
-              Afrique de l'Ouest, en offrant une expérience d'achat exceptionnelle.
+              Devenir la référence incontournable de l'électronique premium au Sénégal et en Afrique de l'Ouest, en offrant une expérience d'achat exceptionnelle.
             </p>
           </div>
           <div class="mission-card">
             <div class="mission-icon">💼</div>
             <h3>Nos Valeurs</h3>
             <p>
-              Intégrité, transparence, excellence du service, et engagement envers la satisfaction 
-              client sont au cœur de tout ce que nous faisons.
+              Intégrité, transparence, excellence du service, et engagement envers la satisfaction client sont au cœur de tout ce que nous faisons.
             </p>
           </div>
           <div class="mission-card">
             <div class="mission-icon">🚀</div>
             <h3>Notre Engagement</h3>
             <p>
-              Fournir uniquement des produits authentiques, offrir un support client réactif, 
-              et garantir une livraison rapide et sécurisée.
+              Fournir uniquement des produits authentiques, offrir un support client réactif, et garantir une livraison rapide et sécurisée.
             </p>
           </div>
         </div>
@@ -105,7 +115,10 @@
       <div class="container">
         <div class="cta-content">
           <h2>Prêt à Découvrir l'Excellence ?</h2>
-          <p>Explorez notre catalogue et trouvez le produit parfait pour vos besoins</p>
+          <p>
+            Explorez notre catalogue et trouvez le produit parfait pour vos
+            besoins
+          </p>
           <div class="cta-actions">
             <router-link to="/shop" class="btn btn-primary">
               Voir la Boutique
@@ -121,6 +134,20 @@
 </template>
 
 <style scoped>
+/* Ajouté : style pour l'image Excellence */
+.excellence-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  display: block;
+    margin: 0;
+    padding: 0;
+    aspect-ratio: 1/1;
+    min-height: 0;
+    min-width: 0;
+}
 .about {
   width: 100%;
 }
@@ -134,15 +161,22 @@
 }
 
 .about-hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    radial-gradient(circle at 30% 50%, rgba(0, 217, 255, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 70% 50%, rgba(255, 0, 110, 0.15) 0%, transparent 50%);
+  background: radial-gradient(
+      circle at 30% 50%,
+      rgba(0, 217, 255, 0.15) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 70% 50%,
+      rgba(255, 0, 110, 0.15) 0%,
+      transparent 50%
+    );
   pointer-events: none;
 }
 
@@ -223,7 +257,7 @@
 }
 
 .visual-box h3 {
-  font-family: 'Orbitron', monospace;
+  font-family: "Orbitron", monospace;
   color: var(--primary);
   font-size: 1.25rem;
 }
@@ -269,7 +303,7 @@
 }
 
 .mission-card h3 {
-  font-family: 'Orbitron', monospace;
+  font-family: "Orbitron", monospace;
   font-size: 1.5rem;
   color: var(--text-light);
   margin-bottom: 1rem;
@@ -306,7 +340,7 @@
 }
 
 .stat-number {
-  font-family: 'Orbitron', monospace;
+  font-family: "Orbitron", monospace;
   font-size: 3rem;
   font-weight: 900;
   background: var(--gradient-primary);
@@ -330,15 +364,22 @@
 }
 
 .cta-section::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 50%, rgba(0, 217, 255, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 50%, rgba(255, 0, 110, 0.15) 0%, transparent 50%);
+  background: radial-gradient(
+      circle at 20% 50%,
+      rgba(0, 217, 255, 0.15) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 50%,
+      rgba(255, 0, 110, 0.15) 0%,
+      transparent 50%
+    );
   pointer-events: none;
 }
 

@@ -5,9 +5,9 @@
         <div class="footer-section">
           <div class="footer-logo">
             <img
-              src="/NDE.png"
+              src="/logo-removebg-preview.png"
               alt="Logo NDIAGA EURO"
-              class="logo-icon logo-img"
+              class="logo-icon logo-img enhanced-logo"
             />
 
             <span class="logo-text">
@@ -100,14 +100,34 @@ const currentYear = computed(() => new Date().getFullYear());
 
 /* Logo image adaptée à la taille du flash */
 .logo-img {
-  height: 2rem;
-  width: auto;
-  max-width: 5rem;
+  height: 4.5rem;
+  width: 4.5rem;
+  max-width: 6rem;
+  max-height: 6rem;
   display: inline-block;
   vertical-align: middle;
-  object-fit: contain;
-  margin-right: 0.1rem;
-  animation: none;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  margin-right: 1rem;
+  background: #fff;
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+  z-index: 2;
+}
+@media (max-width: 900px) {
+  .logo-img {
+    height: 3rem;
+    width: 3rem;
+    max-width: 4rem;
+    max-height: 4rem;
+    border-radius: 12px;
+    margin-right: 0.7rem;
+  }
+}
+.logo-img.enhanced-logo:hover {
+  transform: scale(1.08) rotate(-2deg);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
 }
 .footer {
   background: var(--dark-alt);
