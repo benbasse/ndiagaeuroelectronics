@@ -52,7 +52,7 @@ export const useCartStore = defineStore('cart', () => {
 
   function generateWhatsAppMessage() {
     const storeName = 'Ndiaga Euro Electronics'
-    const phoneNumber = '+221772889673'
+    const phoneNumber = '+221776449999'
     
     let message = `*Commande de ${storeName}*%0A%0A`
     

@@ -49,8 +49,8 @@
             <span class="card-text">Smartphones</span>
           </div>
           <div class="floating-card card-2">
-            <span class="card-icon">💻</span>
-            <span class="card-text">Ordinateurs</span>
+            <span class="card-icon">🛋️</span>
+            <span class="card-text">Décoration</span>
           </div>
           <div class="floating-card card-3">
             <span class="card-icon">🧊</span>

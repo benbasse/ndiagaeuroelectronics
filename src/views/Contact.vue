@@ -87,7 +87,7 @@
                   <div class="info-icon">📞</div>
                   <div class="info-details">
                     <strong>Téléphone</strong>
-                    <a href="tel:+221772889673">+221 77 288 96 73</a>
+                    <a href="tel:+221776449999">+221 77 288 96 73</a>
                   </div>
                 </div>
 
@@ -146,7 +146,7 @@
               <h3>Contact Direct WhatsApp</h3>
               <p>Besoin d'une réponse rapide ? Contactez-nous directement sur WhatsApp</p>
               <a 
-                href="https://wa.me/221772889673" 
+                href="https://wa.me/221776449999" 
                 target="_blank" 
                 class="btn btn-accent"
               >
@@ -173,7 +173,7 @@ const form = ref({
 })
 
 const sendWhatsAppMessage = () => {
-  const phoneNumber = '+221772889673'
+  const phoneNumber = '+221776449999'
   
   let message = `*Nouveau Message de Contact*%0A%0A`
   message += `*Nom:* ${form.value.name}%0A`

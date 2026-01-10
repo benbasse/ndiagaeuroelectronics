@@ -32,6 +32,7 @@
         <span v-if="cartCount > 0" class="cart-badge">{{ cartCount }}</span>
       </router-link>
     </div>
+ 
   </nav>
 </template>
 

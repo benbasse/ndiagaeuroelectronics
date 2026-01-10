@@ -2016,18 +2016,18 @@ export const products = [
     url: 'https://www.baramboupelectronics.com/product/chambre-a-coucher-armoire-6battants-6pieces-beige-6194a/',
     stock: 5
   },
-  {
-    id: 1001,
-    name: 'BARRE DE SON HISENSE 140W HS1800 2.1',
-    price: null,
-    category: 'barre-de-son',
-    description: 'Puissance audio maximale de 140 W\n2.1 canaux avec caisson de basses sans fil\nAmplification des basses\nHDMI ARC\nDiffusion Bluetooth\nPort USB\nLa connectivité Bluetooth vous permet de connecter sans fil votre téléviseur Hisense à des appareils externes tels que des enceintes',
-    features: ['140W', '2.1 canaux', 'Caisson de basses sans fil', 'Bluetooth', 'HDMI ARC', 'USB'],
-    images: ['images_barre_de_son/cuisiniere_1_0.jpg'],
-    mainImage: 'images_barre_de_son/cuisiniere_1_0.jpg',
-    url: 'https://www.baramboupelectronics.com/product/barre-de-son-hisense-140w-hs1800-2-1/',
-    stock: 10
-  },
+  // {
+  //   id: 1001,
+  //   name: 'BARRE DE SON HISENSE 140W HS1800 2.1',
+  //   price: null,
+  //   category: 'barre-de-son',
+  //   description: 'Puissance audio maximale de 140 W\n2.1 canaux avec caisson de basses sans fil\nAmplification des basses\nHDMI ARC\nDiffusion Bluetooth\nPort USB\nLa connectivité Bluetooth vous permet de connecter sans fil votre téléviseur Hisense à des appareils externes tels que des enceintes',
+  //   features: ['140W', '2.1 canaux', 'Caisson de basses sans fil', 'Bluetooth', 'HDMI ARC', 'USB'],
+  //   images: ['images_barre_de_son/cuisiniere_1_0.jpg'],
+  //   mainImage: 'images_barre_de_son/cuisiniere_1_0.jpg',
+  //   url: 'https://www.baramboupelectronics.com/product/barre-de-son-hisense-140w-hs1800-2-1/',
+  //   stock: 10
+  // },
   {
     id: 1002,
     name: 'BARRE DE SON HISENSE 500W AX3100Q 3.1',

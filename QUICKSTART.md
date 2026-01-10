@@ -77,7 +77,7 @@ The WhatsApp checkout automatically formats a message with:
 ### Change Store Phone Number
 Edit `src/stores/cart.js` line 48:
 ```javascript
-const phoneNumber = '+221772889673' // Change this
+const phoneNumber = '+221776449999' // Change this
 ```
 
 ### Add More Products

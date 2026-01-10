@@ -77,7 +77,7 @@ Le panier génère automatiquement un message WhatsApp avec :
 ### Changer le numéro WhatsApp
 Fichier : `src/stores/cart.js` (ligne 48)
 ```javascript
-const phoneNumber = '+221772889673' // Changez ici
+const phoneNumber = '+221776449999' // Changez ici
 ```
 
 ### Modifier les produits
