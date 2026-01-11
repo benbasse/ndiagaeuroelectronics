@@ -116,11 +116,11 @@ When users click "Commander via WhatsApp" in the cart, they are redirected to Wh
 - Store name: Ndiaga Euro Electronics
 - List of products with quantities and prices
 - Total amount
-- Store phone number: +221 77 288 96 73
+- Store phone number: +221 77 644 99 99
 
 ## 📱 Contact Information
 
-- **Phone**: +221 77 288 96 73
+- **Phone**: +221 77 644 99 99
 - **Email**: contact@ndiagaeuro.com
 - **Location**: Dakar, Sénégal
 

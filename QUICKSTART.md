@@ -58,7 +58,7 @@ The WhatsApp checkout automatically formats a message with:
 - All cart items with quantities
 - Individual prices
 - Total price
-- Sends to: +221 77 288 96 73
+- Sends to: +221 77 644 99 99
 
 ## 🎯 What's Included
 

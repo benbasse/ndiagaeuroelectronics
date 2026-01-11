@@ -57,7 +57,7 @@
           <ul class="contact-info">
             <li>
               <span class="icon">📞</span>
-              <span>+221 77 288 96 73</span>
+              <span>+221 77 644 99 99</span>
             </li>
             <li>
               <span class="icon">📧</span>
@@ -108,10 +108,10 @@ const currentYear = computed(() => new Date().getFullYear());
   vertical-align: middle;
   object-fit: cover;
   border-radius: 16px;
-  border: 3px solid #fff;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  border: 3px solid var(--border);
+  box-shadow: var(--shadow-sm);
   margin-right: 1rem;
-  background: #fff;
+  background: var(--dark-lighter);
   transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
   z-index: 2;
 }
@@ -127,12 +127,39 @@ const currentYear = computed(() => new Date().getFullYear());
 }
 .logo-img.enhanced-logo:hover {
   transform: scale(1.08) rotate(-2deg);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  box-shadow: var(--shadow-md);
 }
 .footer {
   background: var(--dark-alt);
   border-top: 1px solid var(--border);
   margin-top: 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(0, 217, 255, 0.1) 0%, transparent 45%),
+    radial-gradient(circle at 80% 70%, rgba(255, 0, 110, 0.1) 0%, transparent 45%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.footer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-primary);
+  z-index: 1;
 }
 
 .footer-content {
@@ -140,6 +167,8 @@ const currentYear = computed(() => new Date().getFullYear());
   grid-template-columns: 2fr 1fr 1fr 1.5fr;
   gap: 3rem;
   padding: 4rem 0;
+  position: relative;
+  z-index: 2;
 }
 
 .footer-section h4 {
@@ -262,6 +291,8 @@ const currentYear = computed(() => new Date().getFullYear());
   border-top: 1px solid var(--border);
   color: var(--text-muted);
   font-size: 0.9rem;
+  position: relative;
+  z-index: 2;
 }
 
 .footer-badges {

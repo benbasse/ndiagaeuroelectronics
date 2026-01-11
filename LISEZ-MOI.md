@@ -70,7 +70,7 @@ Le panier génère automatiquement un message WhatsApp avec :
 - Nom du magasin
 - Liste des produits et quantités
 - Prix total
-- Envoi vers : +221 77 288 96 73
+- Envoi vers : +221 77 644 99 99
 
 ## 🛠️ PERSONNALISATION
 

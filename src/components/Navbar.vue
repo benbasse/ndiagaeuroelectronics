@@ -27,21 +27,49 @@
         <router-link to="/contact" @click="closeMobile">Contact</router-link>
       </div>
 
-      <router-link to="/cart" class="cart-btn" @click="closeMobile">
-        <span class="cart-icon">🛒</span>
-        <span v-if="cartCount > 0" class="cart-badge">{{ cartCount }}</span>
-      </router-link>
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" @click="toggleTheme" :title="isDark ? 'Mode clair' : 'Mode sombre'">
+          <span class="theme-icon" :class="{ 'is-dark': isDark }">
+            <!-- Soleil -->
+            <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/>
+              <line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/>
+              <line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <!-- Lune -->
+            <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </span>
+        </button>
+
+        <!-- Cart Button -->
+        <router-link to="/cart" class="cart-btn" @click="closeMobile">
+          <span class="cart-icon">🛒</span>
+          <span v-if="cartCount > 0" class="cart-badge">{{ cartCount }}</span>
+        </router-link>
+      </div>
     </div>
- 
   </nav>
 </template>
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from "vue";
 import { useCartStore } from "../stores/cart";
+import { useThemeStore } from "../stores/theme";
 
 const cartStore = useCartStore();
+const themeStore = useThemeStore();
+
 const cartCount = computed(() => cartStore.cartCount);
+const isDark = computed(() => themeStore.theme === 'dark');
 
 const isScrolled = ref(false);
 const mobileOpen = ref(false);
@@ -58,6 +86,10 @@ const closeMobile = () => {
   mobileOpen.value = false;
 };
 
+const toggleTheme = () => {
+  themeStore.toggleTheme();
+};
+
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
 });
@@ -72,10 +104,35 @@ onUnmounted(() => {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(10, 14, 39, 0.95);
+  background: var(--navbar-bg);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
   transition: all 0.3s ease;
+}
+
+.navbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 15% 50%, rgba(0, 217, 255, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 50%, rgba(255, 0, 110, 0.08) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.navbar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-primary);
+  z-index: 1;
 }
 
 /* Logo image adaptée à la taille du flash */
@@ -92,7 +149,7 @@ onUnmounted(() => {
 
 .navbar-scrolled {
   box-shadow: var(--shadow-md);
-  background: rgba(10, 14, 39, 0.98);
+  background: var(--navbar-bg-scrolled);
 }
 
 .navbar-container {
@@ -101,6 +158,8 @@ onUnmounted(() => {
   justify-content: space-between;
   padding: 1.25rem 2rem;
   gap: 2rem;
+  position: relative;
+  z-index: 2;
 }
 
 .logo {
@@ -210,6 +269,71 @@ onUnmounted(() => {
   width: 100%;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: var(--dark-lighter);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.theme-toggle:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+
+.theme-icon {
+  position: relative;
+  width: 22px;
+  height: 22px;
+}
+
+.theme-icon svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sun-icon {
+  color: var(--accent);
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.5);
+}
+
+.moon-icon {
+  color: var(--primary);
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.theme-icon.is-dark .sun-icon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.theme-icon.is-dark .moon-icon {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.5);
+}
+
 .cart-btn {
   position: relative;
   display: flex;
@@ -238,7 +362,7 @@ onUnmounted(() => {
   top: -8px;
   right: -8px;
   background: var(--secondary);
-  color: var(--text-light);
+  color: white;
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -306,6 +430,24 @@ onUnmounted(() => {
 
   .logo-tagline {
     font-size: 0.6rem;
+  }
+
+  .nav-actions {
+    gap: 0.75rem;
+  }
+
+  .theme-toggle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .cart-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  .cart-icon {
+    font-size: 1.3rem;
   }
 }
 </style>

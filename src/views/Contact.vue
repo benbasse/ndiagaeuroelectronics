@@ -87,7 +87,7 @@
                   <div class="info-icon">📞</div>
                   <div class="info-details">
                     <strong>Téléphone</strong>
-                    <a href="tel:+221776449999">+221 77 288 96 73</a>
+                    <a href="tel:+221776449999">+221 77 644 99 99</a>
                   </div>
                 </div>
 

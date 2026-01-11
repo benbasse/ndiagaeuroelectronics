@@ -1,11 +1,11 @@
 export const categories = [
-  // { id: 1, name: 'Smartphones', slug: 'smartphones', icon: '📱' },
-  // { id: 2, name: 'Laptops', slug: 'laptops', icon: '💻' },
-  // { id: 3, name: 'Televisions', slug: 'televisions', icon: '📺' },
-  // { id: 4, name: 'Audio Devices', slug: 'audio-devices', icon: '🎧' },
-  // { id: 5, name: 'Computer Accessories', slug: 'computer-accessories', icon: '⌨️' },
-  // { id: 6, name: 'Gaming Equipment', slug: 'gaming-equipment', icon: '🎮' },
-  // { id: 7, name: 'Home Electronics', slug: 'home-electronics', icon: '🏠' },
+  { id: 1, name: 'Smartphones', slug: 'smartphones', icon: '📱' },
+  { id: 2, name: 'Ordinateurs', slug: 'ordinateurs', icon: '💻' },
+  { id: 3, name: 'Tablettes', slug: 'tablettes', icon: '📲' },
+  { id: 4, name: 'Climatiseurs', slug: 'climatiseurs', icon: '❄️' },
+  { id: 5, name: 'Machines à laver', slug: 'machines-a-laver', icon: '🧺' },
+  { id: 6, name: 'Congélateurs', slug: 'congelateurs', icon: '🧊' },
+  { id: 7, name: 'Ventilateurs', slug: 'ventilateurs', icon: '🌀' },
   { id: 8, name: 'Barre de son', slug: 'barre-de-son', icon: '🔊' },
   { id: 9, name: 'Chambre à coucher', slug: 'chambre-a-coucher', icon: '🛏️' },
   { id: 10, name: 'Chauffe-eau', slug: 'chauffe-eau', icon: '💧' },
@@ -18,14 +18,587 @@ export const categories = [
   { id: 17, name: 'Réfrigérateurs', slug: 'refrigerateurs', icon: '🧊' },
   { id: 18, name: 'Salons', slug: 'salons', icon: '🛋️' },
   { id: 19, name: 'Sèche-linge', slug: 'seche-linge', icon: '🧺' },
+  { id: 20, name: 'Tables à manger', slug: 'tables-a-manger', icon: '🍽️' },
   { id: 21, name: 'Tables TV', slug: 'tables-tv', icon: '🖥️' },
   { id: 22, name: 'Téléviseurs', slug: 'televiseurs', icon: '📺' }
-  ,{ id: 20, name: 'Tables à manger', slug: 'tables-a-manger', icon: '🍽️' }
-  ,{ id: 21, name: 'Tables TV', slug: 'tables-tv', icon: '🖥️' }
-  ,{ id: 22, name: 'Téléviseurs', slug: 'televiseurs', icon: '📺' }
 ]
 
 export const products = [
+
+  // ==================== SMARTPHONES ====================
+  {
+    id: 1001,
+    name: 'Samsung Galaxy S24 Ultra',
+    price: null,
+    category: 'smartphones',
+    description: 'Le Samsung Galaxy S24 Ultra repousse les limites avec son écran Dynamic AMOLED 2X de 6.8", processeur Snapdragon 8 Gen 3, appareil photo 200MP, S Pen intégré et intelligence artificielle Galaxy AI.',
+    features: ['Samsung', '6.8"', '200MP', 'S Pen', 'Galaxy AI', '5G'],
+    images: [],
+    mainImage: '',
+    stock: 15
+  },
+  {
+    id: 1002,
+    name: 'Samsung Galaxy S24+',
+    price: null,
+    category: 'smartphones',
+    description: 'Samsung Galaxy S24+ avec écran Dynamic AMOLED 2X de 6.7", processeur Snapdragon 8 Gen 3, triple caméra 50MP et batterie longue durée 4900mAh.',
+    features: ['Samsung', '6.7"', '50MP', 'Snapdragon 8 Gen 3', '5G'],
+    images: [],
+    mainImage: '',
+    stock: 20
+  },
+  {
+    id: 1003,
+    name: 'Samsung Galaxy S24',
+    price: null,
+    category: 'smartphones',
+    description: 'Samsung Galaxy S24 compact et puissant avec écran 6.2" FHD+, processeur Exynos 2400, triple caméra 50MP et design élégant.',
+    features: ['Samsung', '6.2"', '50MP', 'Exynos 2400', '5G'],
+    images: [],
+    mainImage: '',
+    stock: 25
+  },
+  {
+    id: 1004,
+    name: 'Samsung Galaxy Z Fold 5',
+    price: null,
+    category: 'smartphones',
+    description: 'Smartphone pliable Samsung Galaxy Z Fold 5 avec écran principal 7.6", écran externe 6.2", Snapdragon 8 Gen 2, multitâche avancé.',
+    features: ['Samsung', 'Pliable', '7.6"', 'Snapdragon 8 Gen 2', '5G'],
+    images: [],
+    mainImage: '',
+    stock: 8
+  },
+  {
+    id: 1005,
+    name: 'Samsung Galaxy Z Flip 5',
+    price: null,
+    category: 'smartphones',
+    description: 'Samsung Galaxy Z Flip 5 au format compact pliable, écran externe Flex Window 3.4", écran principal 6.7", design tendance.',
+    features: ['Samsung', 'Pliable', '6.7"', 'Flex Window', '5G'],
+    images: [],
+    mainImage: '',
+    stock: 12
+  },
+  {
+    id: 1006,
+    name: 'Samsung Galaxy A54 5G',
+    price: null,
+    category: 'smartphones',
+    description: 'Samsung Galaxy A54 5G avec écran Super AMOLED 6.4", triple caméra 50MP, batterie 5000mAh, résistant à l\'eau IP67.',
+    features: ['Samsung', '6.4"', '50MP', '5000mAh', 'IP67', '5G'],
+    images: [],
+    mainImage: '',
+    stock: 30
+  },
+  {
+    id: 1007,
+    name: 'Samsung Galaxy A34 5G',
+    price: null,
+    category: 'smartphones',
+    description: 'Samsung Galaxy A34 5G, excellent rapport qualité-prix avec écran Super AMOLED 6.6", triple caméra 48MP, batterie 5000mAh.',
+    features: ['Samsung', '6.6"', '48MP', '5000mAh', '5G'],
+    images: [],
+    mainImage: '',
+    stock: 35
+  },
+  {
+    id: 1008,
+    name: 'Samsung Galaxy A14',
+    price: null,
+    category: 'smartphones',
+    description: 'Samsung Galaxy A14, smartphone accessible avec écran 6.6" FHD+, triple caméra 50MP, batterie 5000mAh, idéal pour débuter.',
+    features: ['Samsung', '6.6"', '50MP', '5000mAh', '4G'],
+    images: [],
+    mainImage: '',
+    stock: 40
+  },
+  {
+    id: 1009,
+    name: 'iPhone 15 Pro Max',
+    price: null,
+    category: 'smartphones',
+    description: 'iPhone 15 Pro Max avec puce A17 Pro, écran Super Retina XDR 6.7", système photo pro 48MP, titane, USB-C et Action Button.',
+    features: ['Apple', '6.7"', '48MP', 'A17 Pro', 'Titane', '5G'],
+    images: [],
+    mainImage: '',
+    stock: 10
+  },
+  {
+    id: 1010,
+    name: 'iPhone 15 Pro',
+    price: null,
+    category: 'smartphones',
+    description: 'iPhone 15 Pro avec puce A17 Pro, écran 6.1" Super Retina XDR, châssis titane, caméra pro 48MP et Dynamic Island.',
+    features: ['Apple', '6.1"', '48MP', 'A17 Pro', 'Titane', '5G'],
+    images: [],
+    mainImage: '',
+    stock: 12
+  },
+  {
+    id: 1011,
+    name: 'iPhone 15',
+    price: null,
+    category: 'smartphones',
+    description: 'iPhone 15 avec puce A16 Bionic, écran Super Retina XDR 6.1", Dynamic Island, caméra 48MP et USB-C.',
+    features: ['Apple', '6.1"', '48MP', 'A16 Bionic', 'USB-C', '5G'],
+    images: [],
+    mainImage: '',
+    stock: 18
+  },
+  {
+    id: 1012,
+    name: 'iPhone 14',
+    price: null,
+    category: 'smartphones',
+    description: 'iPhone 14 avec puce A15 Bionic, écran Super Retina XDR 6.1", double caméra 12MP, détection des accidents.',
+    features: ['Apple', '6.1"', '12MP', 'A15 Bionic', '5G'],
+    images: [],
+    mainImage: '',
+    stock: 20
+  },
+
+  // ==================== ORDINATEURS ====================
+  {
+    id: 2001,
+    name: 'MacBook Pro 16" M3 Max',
+    price: null,
+    category: 'ordinateurs',
+    description: 'MacBook Pro 16 pouces avec puce M3 Max, écran Liquid Retina XDR, jusqu\'à 128Go RAM, performances exceptionnelles pour les créatifs.',
+    features: ['Apple', 'M3 Max', '16"', 'Liquid Retina XDR', '36Go RAM'],
+    images: [],
+    mainImage: '',
+    stock: 5
+  },
+  {
+    id: 2002,
+    name: 'MacBook Pro 14" M3 Pro',
+    price: null,
+    category: 'ordinateurs',
+    description: 'MacBook Pro 14 pouces avec puce M3 Pro, écran Liquid Retina XDR, autonomie exceptionnelle, parfait pour les professionnels.',
+    features: ['Apple', 'M3 Pro', '14"', 'Liquid Retina XDR', '18Go RAM'],
+    images: [],
+    mainImage: '',
+    stock: 8
+  },
+  {
+    id: 2003,
+    name: 'MacBook Air 15" M3',
+    price: null,
+    category: 'ordinateurs',
+    description: 'MacBook Air 15 pouces ultrafin avec puce M3, écran Liquid Retina, 18h d\'autonomie, design élégant sans ventilateur.',
+    features: ['Apple', 'M3', '15"', 'Liquid Retina', '8Go RAM'],
+    images: [],
+    mainImage: '',
+    stock: 12
+  },
+  {
+    id: 2004,
+    name: 'MacBook Air 13" M3',
+    price: null,
+    category: 'ordinateurs',
+    description: 'MacBook Air 13 pouces compact avec puce M3, le laptop le plus populaire, léger, puissant et endurant.',
+    features: ['Apple', 'M3', '13"', 'Liquid Retina', '8Go RAM'],
+    images: [],
+    mainImage: '',
+    stock: 15
+  },
+  {
+    id: 2005,
+    name: 'HP Spectre x360 16"',
+    price: null,
+    category: 'ordinateurs',
+    description: 'HP Spectre x360 convertible 16" avec Intel Core Ultra 7, écran OLED 3K tactile, design premium en aluminium.',
+    features: ['HP', 'Intel Core Ultra 7', '16"', 'OLED 3K', 'Convertible'],
+    images: [],
+    mainImage: '',
+    stock: 7
+  },
+  {
+    id: 2006,
+    name: 'Dell XPS 15',
+    price: null,
+    category: 'ordinateurs',
+    description: 'Dell XPS 15 avec Intel Core i7 13ème gen, écran OLED 3.5K InfinityEdge, design compact et performances élevées.',
+    features: ['Dell', 'Intel Core i7', '15.6"', 'OLED 3.5K', '16Go RAM'],
+    images: [],
+    mainImage: '',
+    stock: 10
+  },
+  {
+    id: 2007,
+    name: 'Lenovo ThinkPad X1 Carbon',
+    price: null,
+    category: 'ordinateurs',
+    description: 'Lenovo ThinkPad X1 Carbon Gen 11, ultrabook professionnel avec Intel Core i7, écran 14" 2.8K, clavier légendaire.',
+    features: ['Lenovo', 'Intel Core i7', '14"', '2.8K', 'ThinkPad'],
+    images: [],
+    mainImage: '',
+    stock: 8
+  },
+  {
+    id: 2008,
+    name: 'ASUS ROG Zephyrus G14',
+    price: null,
+    category: 'ordinateurs',
+    description: 'ASUS ROG Zephyrus G14, laptop gaming compact avec AMD Ryzen 9, RTX 4090, écran 14" QHD+ 165Hz.',
+    features: ['ASUS', 'Ryzen 9', 'RTX 4090', '14"', '165Hz'],
+    images: [],
+    mainImage: '',
+    stock: 6
+  },
+  {
+    id: 2009,
+    name: 'HP Pavilion 15',
+    price: null,
+    category: 'ordinateurs',
+    description: 'HP Pavilion 15, ordinateur polyvalent avec Intel Core i5, écran FHD 15.6", idéal pour le travail et les loisirs.',
+    features: ['HP', 'Intel Core i5', '15.6"', 'FHD', '8Go RAM'],
+    images: [],
+    mainImage: '',
+    stock: 20
+  },
+  {
+    id: 2010,
+    name: 'Lenovo IdeaPad Slim 3',
+    price: null,
+    category: 'ordinateurs',
+    description: 'Lenovo IdeaPad Slim 3, laptop abordable avec AMD Ryzen 5, écran 15.6" FHD, parfait pour les étudiants.',
+    features: ['Lenovo', 'Ryzen 5', '15.6"', 'FHD', '8Go RAM'],
+    images: [],
+    mainImage: '',
+    stock: 25
+  },
+
+  // ==================== TABLETTES ====================
+  {
+    id: 3001,
+    name: 'iPad Pro 12.9" M4',
+    price: null,
+    category: 'tablettes',
+    description: 'iPad Pro 12.9 pouces avec puce M4, écran Ultra Retina XDR tandem OLED, le plus fin jamais conçu, Face ID.',
+    features: ['Apple', 'M4', '12.9"', 'OLED', 'Face ID'],
+    images: [],
+    mainImage: '',
+    stock: 8
+  },
+  {
+    id: 3002,
+    name: 'iPad Pro 11" M4',
+    price: null,
+    category: 'tablettes',
+    description: 'iPad Pro 11 pouces avec puce M4, écran Ultra Retina XDR, Apple Pencil Pro compatible, performances de pointe.',
+    features: ['Apple', 'M4', '11"', 'Ultra Retina XDR'],
+    images: [],
+    mainImage: '',
+    stock: 10
+  },
+  {
+    id: 3003,
+    name: 'iPad Air 13" M2',
+    price: null,
+    category: 'tablettes',
+    description: 'iPad Air 13 pouces avec puce M2, grand écran Liquid Retina, puissant et polyvalent pour créer et travailler.',
+    features: ['Apple', 'M2', '13"', 'Liquid Retina'],
+    images: [],
+    mainImage: '',
+    stock: 12
+  },
+  {
+    id: 3004,
+    name: 'iPad 10ème génération',
+    price: null,
+    category: 'tablettes',
+    description: 'iPad 10ème génération avec puce A14 Bionic, écran 10.9" Liquid Retina, USB-C, design coloré moderne.',
+    features: ['Apple', 'A14 Bionic', '10.9"', 'USB-C'],
+    images: [],
+    mainImage: '',
+    stock: 20
+  },
+  {
+    id: 3005,
+    name: 'Samsung Galaxy Tab S9 Ultra',
+    price: null,
+    category: 'tablettes',
+    description: 'Samsung Galaxy Tab S9 Ultra avec écran AMOLED 14.6", Snapdragon 8 Gen 2, S Pen inclus, résistant à l\'eau.',
+    features: ['Samsung', '14.6"', 'AMOLED', 'S Pen', 'IP68'],
+    images: [],
+    mainImage: '',
+    stock: 6
+  },
+  {
+    id: 3006,
+    name: 'Samsung Galaxy Tab S9+',
+    price: null,
+    category: 'tablettes',
+    description: 'Samsung Galaxy Tab S9+ avec écran AMOLED 12.4", processeur puissant, S Pen inclus, productivité maximale.',
+    features: ['Samsung', '12.4"', 'AMOLED', 'S Pen'],
+    images: [],
+    mainImage: '',
+    stock: 10
+  },
+  {
+    id: 3007,
+    name: 'Samsung Galaxy Tab A9+',
+    price: null,
+    category: 'tablettes',
+    description: 'Samsung Galaxy Tab A9+, tablette familiale avec écran 11" LCD, son Dolby Atmos, idéale pour le divertissement.',
+    features: ['Samsung', '11"', 'LCD', 'Dolby Atmos'],
+    images: [],
+    mainImage: '',
+    stock: 18
+  },
+
+  // ==================== CLIMATISEURS ====================
+  {
+    id: 4001,
+    name: 'Samsung Wind-Free 12000 BTU',
+    price: null,
+    category: 'climatiseurs',
+    description: 'Climatiseur Samsung Wind-Free 12000 BTU, diffusion d\'air sans courant d\'air direct, technologie Inverter, silencieux.',
+    features: ['Samsung', '12000 BTU', 'Wind-Free', 'Inverter', 'WiFi'],
+    images: [],
+    mainImage: '',
+    stock: 10
+  },
+  {
+    id: 4002,
+    name: 'Samsung Wind-Free 18000 BTU',
+    price: null,
+    category: 'climatiseurs',
+    description: 'Climatiseur Samsung Wind-Free 18000 BTU pour grandes pièces, technologie AI Auto Cooling, filtration avancée.',
+    features: ['Samsung', '18000 BTU', 'Wind-Free', 'AI Cooling', 'Inverter'],
+    images: [],
+    mainImage: '',
+    stock: 8
+  },
+  {
+    id: 4003,
+    name: 'LG Dual Inverter 12000 BTU',
+    price: null,
+    category: 'climatiseurs',
+    description: 'Climatiseur LG Dual Inverter 12000 BTU, économie d\'énergie jusqu\'à 70%, refroidissement rapide, contrôle WiFi.',
+    features: ['LG', '12000 BTU', 'Dual Inverter', 'WiFi', 'Économique'],
+    images: [],
+    mainImage: '',
+    stock: 12
+  },
+  {
+    id: 4004,
+    name: 'LG Dual Inverter 24000 BTU',
+    price: null,
+    category: 'climatiseurs',
+    description: 'Climatiseur LG Dual Inverter 24000 BTU haute capacité, idéal pour les grands espaces, technologie ThinQ.',
+    features: ['LG', '24000 BTU', 'Dual Inverter', 'ThinQ', 'WiFi'],
+    images: [],
+    mainImage: '',
+    stock: 6
+  },
+  {
+    id: 4005,
+    name: 'Hisense 9000 BTU',
+    price: null,
+    category: 'climatiseurs',
+    description: 'Climatiseur Hisense 9000 BTU, compact et efficace, mode turbo, idéal pour les petites pièces.',
+    features: ['Hisense', '9000 BTU', 'Turbo', 'Compact'],
+    images: [],
+    mainImage: '',
+    stock: 15
+  },
+  {
+    id: 4006,
+    name: 'TCL 12000 BTU Inverter',
+    price: null,
+    category: 'climatiseurs',
+    description: 'Climatiseur TCL 12000 BTU avec technologie Inverter, mode sommeil silencieux, excellent rapport qualité-prix.',
+    features: ['TCL', '12000 BTU', 'Inverter', 'Mode Sommeil'],
+    images: [],
+    mainImage: '',
+    stock: 18
+  },
+
+  // ==================== MACHINES À LAVER ====================
+  {
+    id: 5001,
+    name: 'Samsung EcoBubble 9kg',
+    price: null,
+    category: 'machines-a-laver',
+    description: 'Lave-linge Samsung EcoBubble 9kg, technologie à bulles d\'air pour lavage efficace à froid, AI Wash intelligent.',
+    features: ['Samsung', '9kg', 'EcoBubble', 'AI Wash', 'Inverter'],
+    images: [],
+    mainImage: '',
+    stock: 10
+  },
+  {
+    id: 5002,
+    name: 'Samsung EcoBubble 12kg',
+    price: null,
+    category: 'machines-a-laver',
+    description: 'Lave-linge Samsung EcoBubble 12kg grande capacité, AddWash pour ajouter du linge en cours de cycle.',
+    features: ['Samsung', '12kg', 'EcoBubble', 'AddWash', 'WiFi'],
+    images: [],
+    mainImage: '',
+    stock: 7
+  },
+  {
+    id: 5003,
+    name: 'LG TurboWash 10kg',
+    price: null,
+    category: 'machines-a-laver',
+    description: 'Lave-linge LG TurboWash 10kg, lavage rapide en 39 minutes, moteur Direct Drive garanti 10 ans.',
+    features: ['LG', '10kg', 'TurboWash', 'Direct Drive', 'Steam'],
+    images: [],
+    mainImage: '',
+    stock: 9
+  },
+  {
+    id: 5004,
+    name: 'LG TWINWash 12kg+2kg',
+    price: null,
+    category: 'machines-a-laver',
+    description: 'Lave-linge LG TWINWash avec mini-lave-linge intégré, lavez 2 charges simultanément, technologie ThinQ.',
+    features: ['LG', '12kg+2kg', 'TWINWash', 'ThinQ', 'AI DD'],
+    images: [],
+    mainImage: '',
+    stock: 5
+  },
+  {
+    id: 5005,
+    name: 'Hisense 8kg Inverter',
+    price: null,
+    category: 'machines-a-laver',
+    description: 'Lave-linge Hisense 8kg avec moteur Inverter silencieux, 15 programmes de lavage, économique.',
+    features: ['Hisense', '8kg', 'Inverter', '15 Programmes'],
+    images: [],
+    mainImage: '',
+    stock: 15
+  },
+  {
+    id: 5006,
+    name: 'Beko 7kg ProSmart',
+    price: null,
+    category: 'machines-a-laver',
+    description: 'Lave-linge Beko 7kg ProSmart Inverter, programme rapide 14 minutes, parfait pour les petits espaces.',
+    features: ['Beko', '7kg', 'ProSmart', 'Rapide 14min'],
+    images: [],
+    mainImage: '',
+    stock: 20
+  },
+
+  // ==================== CONGÉLATEURS ====================
+  {
+    id: 6001,
+    name: 'Samsung Chest Freezer 300L',
+    price: null,
+    category: 'congelateurs',
+    description: 'Congélateur coffre Samsung 300L, congélation rapide, intérieur spacieux, faible consommation.',
+    features: ['Samsung', '300L', 'Coffre', 'Congélation Rapide'],
+    images: [],
+    mainImage: '',
+    stock: 8
+  },
+  {
+    id: 6002,
+    name: 'LG Congélateur Vertical 320L',
+    price: null,
+    category: 'congelateurs',
+    description: 'Congélateur vertical LG 320L avec No Frost, multi-tiroirs pratiques, alarme porte ouverte.',
+    features: ['LG', '320L', 'Vertical', 'No Frost'],
+    images: [],
+    mainImage: '',
+    stock: 6
+  },
+  {
+    id: 6003,
+    name: 'Hisense Congélateur Coffre 400L',
+    price: null,
+    category: 'congelateurs',
+    description: 'Congélateur coffre Hisense 400L grande capacité, idéal pour les familles, classe énergétique A+.',
+    features: ['Hisense', '400L', 'Coffre', 'A+'],
+    images: [],
+    mainImage: '',
+    stock: 10
+  },
+  {
+    id: 6004,
+    name: 'Beko Congélateur Vertical 250L',
+    price: null,
+    category: 'congelateurs',
+    description: 'Congélateur vertical Beko 250L, technologie MinFrost, éclairage LED intérieur.',
+    features: ['Beko', '250L', 'Vertical', 'MinFrost', 'LED'],
+    images: [],
+    mainImage: '',
+    stock: 12
+  },
+
+  // ==================== VENTILATEURS ====================
+  {
+    id: 7001,
+    name: 'Dyson Purifier Cool',
+    price: null,
+    category: 'ventilateurs',
+    description: 'Ventilateur purificateur Dyson Cool, purifie l\'air et rafraîchit, technologie Air Multiplier, silencieux.',
+    features: ['Dyson', 'Purificateur', 'Air Multiplier', 'HEPA', 'WiFi'],
+    images: [],
+    mainImage: '',
+    stock: 6
+  },
+  {
+    id: 7002,
+    name: 'Dyson AM07 Tower',
+    price: null,
+    category: 'ventilateurs',
+    description: 'Ventilateur colonne Dyson AM07, design sans pale, télécommande magnétique, 10 vitesses.',
+    features: ['Dyson', 'Tour', 'Sans Pale', 'Télécommande'],
+    images: [],
+    mainImage: '',
+    stock: 8
+  },
+  {
+    id: 7003,
+    name: 'Rowenta Turbo Silence Extreme',
+    price: null,
+    category: 'ventilateurs',
+    description: 'Ventilateur sur pied Rowenta Turbo Silence, ultra silencieux 35dB, oscillation, 5 vitesses.',
+    features: ['Rowenta', 'Sur pied', 'Silencieux', 'Oscillation'],
+    images: [],
+    mainImage: '',
+    stock: 15
+  },
+  {
+    id: 7004,
+    name: 'Ventilateur Colonne 80cm',
+    price: null,
+    category: 'ventilateurs',
+    description: 'Ventilateur colonne 80cm avec télécommande, minuterie, 3 vitesses, oscillation 60°.',
+    features: ['Tour 80cm', 'Télécommande', 'Minuterie', 'Oscillation'],
+    images: [],
+    mainImage: '',
+    stock: 25
+  },
+  {
+    id: 7005,
+    name: 'Ventilateur Plafond LED',
+    price: null,
+    category: 'ventilateurs',
+    description: 'Ventilateur de plafond avec éclairage LED intégré, télécommande, 6 vitesses, mode été/hiver.',
+    features: ['Plafond', 'LED', 'Télécommande', '6 Vitesses'],
+    images: [],
+    mainImage: '',
+    stock: 18
+  },
+  {
+    id: 7006,
+    name: 'Ventilateur Bureau USB',
+    price: null,
+    category: 'ventilateurs',
+    description: 'Mini ventilateur de bureau USB, compact et silencieux, inclinaison réglable, idéal pour le bureau.',
+    features: ['Bureau', 'USB', 'Compact', 'Silencieux'],
+    images: [],
+    mainImage: '',
+    stock: 40
+  },
 
   // Barre de son (ajoutés depuis barre_de_son_complets.json)
   // Chambre à coucher (ajoutés depuis chambre_a_coucher_complets.json)
@@ -121,8 +694,8 @@ export const products = [
     category: 'televiseurs',
     description: 'Panasonic LZ2000 : OLED Master, calibration Hollywood, Dolby Vision IQ, Filmmaker Mode, son Technics. Pour les passionnés de cinéma et de durabilité.',
     features: ['Panasonic', 'OLED', 'Dolby Vision IQ', 'Filmmaker Mode', 'Technics', '55"'],
-    images: ['images_televiseurs/cuisiniere_7_0.jpg', 'images_televiseurs/cuisiniere_7_1.jpg'],
-    mainImage: 'images_televiseurs/cuisiniere_7_0.jpg',
+    images: ['images_televiseurs/cuisiniere_1_0.jpg', 'images_televiseurs/cuisiniere_1_1.jpg'],
+    mainImage: 'images_televiseurs/cuisiniere_1_0.jpg',
     url: '#',
     stock: 5
   },

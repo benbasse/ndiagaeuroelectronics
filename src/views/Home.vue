@@ -24,8 +24,8 @@
           <p>Découvrez tous nos produits classés par catégorie</p>
         </div>
         <div v-for="(products, category) in groupedAllProducts" :key="category" class="category-group">
-          <h3 class="category-title">{{ category }}</h3>
-          <div class="grid grid-3">
+          <h3 class="category-title">{{ formatCategoryName(category) }}</h3>
+          <div class="products-grid">
             <ProductCard v-for="product in products" :key="product.id" :product="product" />
           </div>
         </div>
@@ -84,6 +84,12 @@ const groupedAllProducts = computed(() => {
   })
   return groups
 })
+
+// Formater le nom de la catégorie
+const formatCategoryName = (slug) => {
+  const category = categories.find(c => c.slug === slug)
+  return category?.name || slug.charAt(0).toUpperCase() + slug.slice(1).replace(/-/g, ' ')
+}
 </script>
 
 <style scoped>
@@ -186,12 +192,49 @@ const groupedAllProducts = computed(() => {
   color: #fff;
 }
 
+.category-group {
+  margin-bottom: 3rem;
+}
+
 .category-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
   margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-  color: var(--primary);
-  text-transform: capitalize;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  font-family: 'Orbitron', monospace;
+  color: var(--text-light);
+  position: relative;
+  padding-left: 1rem;
+}
+
+.category-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 70%;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+}
+
+.category-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--border) 0%, transparent 100%);
+  margin-left: 1rem;
+  min-width: 50px;
+}
+
+/* Grille de produits améliorée */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
 @media (max-width: 768px) {
@@ -202,6 +245,26 @@ const groupedAllProducts = computed(() => {
 
   .feature-card {
     padding: 2rem 1rem;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .category-title {
+    font-size: 1.2rem;
+  }
+
+  .category-group {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
 }
 </style>
